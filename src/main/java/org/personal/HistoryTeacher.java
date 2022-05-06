@@ -15,20 +15,20 @@
  */
 package org.personal;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.NoArgsConstructor;
 
 /**
  *
  * @author Agus Tinus Turnip
  */
-
+@NoArgsConstructor(staticName = "createEmpty")
+@AllArgsConstructor(staticName = "create")
 @Getter
-@Setter
-@ToString
-public class BahasaTeacher {
+public class HistoryTeacher {
 
     private String id;
     private String name;
+
 }

@@ -15,20 +15,28 @@
  */
 package org.personal;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Singular;
 
 /**
  *
  * @author Agus Tinus Turnip
  */
-
-@Getter
-@Setter
-@ToString
-public class BahasaTeacher {
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class ComputerTeacher {
 
     private String id;
     private String name;
+    private Integer age;
+    
+    @Singular
+    private List<String> softwares;
+
 }

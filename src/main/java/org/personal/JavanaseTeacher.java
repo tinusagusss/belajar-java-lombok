@@ -16,19 +16,18 @@
 package org.personal;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 /**
  *
  * @author Agus Tinus Turnip
  */
-
 @Getter
 @Setter
-@ToString
-public class BahasaTeacher {
+@RequiredArgsConstructor
+public class JavanaseTeacher {
 
-    private String id;
+    private final String id;
     private String name;
 }

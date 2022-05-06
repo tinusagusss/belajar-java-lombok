@@ -15,20 +15,21 @@
  */
 package org.personal;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 /**
  *
  * @author Agus Tinus Turnip
  */
-
 @Getter
 @Setter
-@ToString
-public class BahasaTeacher {
+@NoArgsConstructor
+@EqualsAndHashCode
+public class Teacher {
 
-    private String id;
-    private String name;
+    private Integer totalTeacher;
+
 }
