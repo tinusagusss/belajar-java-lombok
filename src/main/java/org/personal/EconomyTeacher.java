@@ -15,19 +15,18 @@
  */
 package org.personal;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  *
  * @author Agus Tinus Turnip
  */
-
-@Getter
-@Setter
-@ToString
-public class BahasaTeacher {
+@Data
+@AllArgsConstructor
+@EqualsAndHashCode(exclude = "id", callSuper = true)
+public class EconomyTeacher extends Teacher {
 
     private String id;
     private String name;

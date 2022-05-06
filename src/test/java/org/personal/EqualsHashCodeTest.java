@@ -22,35 +22,33 @@ import org.junit.jupiter.api.Test;
  *
  * @author Agus Tinus Turnip
  */
-public class SetterGetterTest {
+public class EqualsHashCodeTest {
 
     @Test
-    public void testSetterGetter() {
-        var teacher = new BahasaTeacher();
-
+    public void testEquals() {
         var id = "01";
-        var name = "Susi";
+        var name = "Sri";
 
-        teacher.setId(id);
-        teacher.setName(name);
+        var teacher1 = new EconomyTeacher(id, name);
+        var teacher2 = new EconomyTeacher(id, name);
 
-        Assertions.assertEquals(teacher.getId(), id);
-        Assertions.assertEquals(teacher.getName(), name);
+        Assertions.assertEquals(teacher1, teacher2);
+        Assertions.assertEquals(teacher1.hashCode(), teacher2.hashCode());
     }
 
     @Test
-    public void testSetterGetterAccessLevel() {
+    public void testExcludeEquals() {
+        var id = "01";
+        var name = "Sri";
 
-        var teacher = new EnglishTeacher();
+        var id1 = "02";
 
-        var id = "02";
-        var name = "Yanto";
+        var teacher1 = new EconomyTeacher(id, name);
+        var teacher2 = new EconomyTeacher(id1, name);
 
-        teacher.setId(id);
-        teacher.setName(name);
-
-        Assertions.assertEquals(teacher.getId(), id);
-        Assertions.assertEquals(teacher.getName(), name);
+        Assertions.assertEquals(teacher1, teacher2);
+        Assertions.assertEquals(teacher1.hashCode(), teacher2.hashCode());
     }
-
+    
+    
 }

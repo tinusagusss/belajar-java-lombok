@@ -15,6 +15,7 @@
  */
 package org.personal;
 
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -23,12 +24,14 @@ import lombok.ToString;
  *
  * @author Agus Tinus Turnip
  */
-
 @Getter
-@Setter
-@ToString
-public class BahasaTeacher {
+@ToString(exclude = "id")
+public class EnglishTeacher {
 
+    @Setter(value = AccessLevel.PROTECTED)
     private String id;
+
+    @Setter(value = AccessLevel.PUBLIC)
     private String name;
+
 }

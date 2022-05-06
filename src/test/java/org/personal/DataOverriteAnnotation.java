@@ -15,6 +15,7 @@
  */
 package org.personal;
 
+import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -22,35 +23,23 @@ import org.junit.jupiter.api.Test;
  *
  * @author Agus Tinus Turnip
  */
-public class SetterGetterTest {
+public class DataOverriteAnnotation {
 
     @Test
-    public void testSetterGetter() {
-        var teacher = new BahasaTeacher();
-
+    public void testData() {
         var id = "01";
-        var name = "Susi";
+        var name = "Sri";
 
-        teacher.setId(id);
-        teacher.setName(name);
+        var teacher1 = new EconomyTeacher(id, name);
+        var teacher2 = new EconomyTeacher(id, name);
 
-        Assertions.assertEquals(teacher.getId(), id);
-        Assertions.assertEquals(teacher.getName(), name);
-    }
+        Assertions.assertEquals(teacher1, teacher2);
+        Assertions.assertEquals(teacher1.hashCode(), teacher2.hashCode());
 
-    @Test
-    public void testSetterGetterAccessLevel() {
+        var name1 = "Surti";
+        teacher1.setName(name1);
 
-        var teacher = new EnglishTeacher();
-
-        var id = "02";
-        var name = "Yanto";
-
-        teacher.setId(id);
-        teacher.setName(name);
-
-        Assertions.assertEquals(teacher.getId(), id);
-        Assertions.assertEquals(teacher.getName(), name);
+        Assertions.assertNotEquals(teacher1.getName(), name);
     }
 
 }

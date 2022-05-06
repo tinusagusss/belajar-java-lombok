@@ -15,19 +15,20 @@
  */
 package org.personal;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 /**
  *
  * @author Agus Tinus Turnip
  */
-
 @Getter
 @Setter
-@ToString
-public class BahasaTeacher {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ScienceTeacher {
 
     private String id;
     private String name;
